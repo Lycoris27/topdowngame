@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dplht4kp1lxuc"]
+
+[ext_resource type="Texture2D" uid="uid://bjss4dsyjfjjh" path="res://assets/Tilenew.png" id="1_yjkpf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_luolc"]
+radius = 7.0
+
+[node name="tile" type="Sprite2D"]
+modulate = Color(0.784314, 0, 0.0823529, 0.588235)
+texture = ExtResource("1_yjkpf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_luolc")

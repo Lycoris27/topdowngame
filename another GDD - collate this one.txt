@@ -1,0 +1,35 @@
+queensland gamejam
+
+Main aim - Use what I have to create the skeleton for a game (if I want to make something out of what I have, use what I have in order to make a skeleton for it)
+
+
+Game ideas
+
+- The game will be a 2d pixel art game that has different types of levels
+
+- I only have access to the brackeys game jam videos, therefore I should base it upon that
+- platformer
+
+
+simple game using the brackeys video? could make something more personal.
+
+could attempt to make a game that could fit into the idea of the "simone's bakery" game.
+
+if
+assets are too hard to make - use the brackeys ones as placeholders
+
+
+ADD AN INVENTORY SYSTEM
+simple one
+when I press tab, it opens, has the name of the object in an array, the array will be a length of max 8x8
+
+
+autoloads:
+-global scenes we want to persist throughout entire game
+
+
+Layers
+1 - background
+2 - player
+3 - enemies
+4 - tiles

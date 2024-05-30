@@ -1,0 +1,17 @@
+TODO:
+
+time to create an enemy battler script, the main location this probs should be placed is within the gamescene script
+
+when an enemy overlaps with the cursor during tilemode, it should engage the attack enemy script, currently this only makes it so the player moves to the side of the enemy that they are going to attack. From this, an enemy UI should show up, you press enter again, the enemy and player battle and then the enemy and player lose health.
+
+for this, instead of doing UI stuff for now, do in console
+
+player has to be able to determine their atk type, they should also have a weapon, so if a player with a wand attacks it should be magical damage, also speed should come into effect sometime soon
+
+
+
+enemy.TakeDamage(player.values[atk])
+if enemy.values[health] > 0:
+	player.TakeDamage(player.values[atk])
+
+
