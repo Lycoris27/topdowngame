@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dka6rvp6wvihh"]
 
-[ext_resource type="FontFile" uid="uid://dci34ew8vm4e7" path="res://assets/PixelOperator8.ttf" id="1_0y606"]
+[ext_resource type="PackedScene" uid="uid://cy2y5ffoa5j54" path="res://scenes/UIbutton.tscn" id="1_t3rwi"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -24,46 +24,19 @@ theme_override_constants/margin_top = 370
 theme_override_constants/margin_right = 720
 theme_override_constants/margin_bottom = 370
 
-[node name="Panel" type="Panel" parent="Control/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
 layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="Control/MarginContainer/Panel/VBoxContainer"]
+[node name="Button" parent="Control/MarginContainer/VBoxContainer" instance=ExtResource("1_t3rwi")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../Button3")
-focus_neighbor_bottom = NodePath("../Button2")
-theme_override_fonts/font = ExtResource("1_0y606")
-theme_override_font_sizes/font_size = 16
-text = "bonk"
+focus_neighbor_bottom = NodePath("")
+focusing = true
 
-[node name="Button2" type="Button" parent="Control/MarginContainer/Panel/VBoxContainer"]
+[node name="Button2" parent="Control/MarginContainer/VBoxContainer" instance=ExtResource("1_t3rwi")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../Button")
-focus_neighbor_bottom = NodePath("../Button3")
-theme_override_fonts/font = ExtResource("1_0y606")
-theme_override_font_sizes/font_size = 16
-text = "bonk"
+focus_neighbor_bottom = NodePath("")
 
-[node name="Button3" type="Button" parent="Control/MarginContainer/Panel/VBoxContainer"]
+[node name="Button3" parent="Control/MarginContainer/VBoxContainer" instance=ExtResource("1_t3rwi")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../Button2")
-focus_neighbor_bottom = NodePath("../Button")
-theme_override_fonts/font = ExtResource("1_0y606")
-theme_override_font_sizes/font_size = 16
-text = "bonk"
-
-[node name="Button4" type="Button" parent="Control/MarginContainer/Panel/VBoxContainer"]
-layout_mode = 2
-focus_neighbor_top = NodePath("../Button2")
-focus_neighbor_bottom = NodePath("../Button")
-theme_override_fonts/font = ExtResource("1_0y606")
-theme_override_font_sizes/font_size = 16
-text = "bonk"
+focus_neighbor_bottom = NodePath("")
