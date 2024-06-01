@@ -21,29 +21,33 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 1060
 theme_override_constants/margin_top = 370
-theme_override_constants/margin_right = 750
+theme_override_constants/margin_right = 720
 theme_override_constants/margin_bottom = 370
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="UIButton" parent="Control/MarginContainer/VBoxContainer" node_paths=PackedStringArray("nodePrompted") instance=ExtResource("1_t3rwi")]
+[node name="UIButton" parent="Control/MarginContainer/VBoxContainer" node_paths=PackedStringArray("buttonprompt") instance=ExtResource("1_t3rwi")]
 layout_mode = 2
+focus_neighbor_top = NodePath("../UIButton3")
+focus_neighbor_bottom = NodePath("../UIButton2")
 focusing = true
-nodePrompted = NodePath("../UIButton3")
-output = 0
+buttonprompt = NodePath("../..")
+scenePrompt = ExtResource("1_t3rwi")
 
 [node name="UIButton2" parent="Control/MarginContainer/VBoxContainer" instance=ExtResource("1_t3rwi")]
 layout_mode = 2
-output = 0
+focus_neighbor_top = NodePath("../UIButton")
+focus_neighbor_bottom = NodePath("../UIButton3")
 
 [node name="UIButton3" parent="Control/MarginContainer/VBoxContainer" instance=ExtResource("1_t3rwi")]
-visible = false
 layout_mode = 2
-output = 0
+focus_neighbor_top = NodePath("../UIButton2")
+focus_neighbor_bottom = NodePath("../UIButton")
 
 [node name="UIButton4" parent="Control/MarginContainer/VBoxContainer" instance=ExtResource("1_t3rwi")]
 visible = false
 layout_mode = 2
-output = 0
+focus_neighbor_top = NodePath("../UIButton2")
+focus_neighbor_bottom = NodePath("../UIButton")

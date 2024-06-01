@@ -118,5 +118,11 @@ func WithinRange(player, playpos, curpos, no):
 
 
 # attack mode will be a second checkmode, if the player is attempting to 
-func AttackEnemy():
+func Attack():
+	pass
+
+func Items():
+	pass
+
+func Wait():
 	pass

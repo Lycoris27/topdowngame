@@ -1,16 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy2y5ffoa5j54"]
+[gd_scene load_steps=4 format=3 uid="uid://cy2y5ffoa5j54"]
 
+[ext_resource type="Theme" uid="uid://cdu7mswmohff" path="res://assets/Button.tres" id="1_1unfr"]
 [ext_resource type="FontFile" uid="uid://dci34ew8vm4e7" path="res://assets/PixelOperator8.ttf" id="1_7o1vv"]
 [ext_resource type="Script" path="res://scripts/UIbutton.gd" id="2_7tggn"]
 
-[node name="Button" type="Button"]
-focus_neighbor_bottom = NodePath("../Button3")
+[node name="UIButton" type="Button"]
+custom_minimum_size = Vector2(0, 45)
+offset_right = 100.0
+offset_bottom = 47.0
 mouse_filter = 2
+theme = ExtResource("1_1unfr")
 theme_override_fonts/font = ExtResource("1_7o1vv")
-theme_override_font_sizes/font_size = 16
-disabled = true
+theme_override_font_sizes/font_size = 24
 text = "bonk"
 script = ExtResource("2_7tggn")
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="button_down" from="." to="." method="_on_button_down"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]
