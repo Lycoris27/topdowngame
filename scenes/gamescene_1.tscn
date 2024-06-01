@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://uyl1akio3v2c" path="res://scenes/cursor.tscn" id="4_sneru"]
 [ext_resource type="PackedScene" uid="uid://8b1spnxhi86o" path="res://scenes/Enemy.tscn" id="5_twrc1"]
 [ext_resource type="Script" path="res://scripts/tilehandler.gd" id="6_kgvpc"]
-[ext_resource type="PackedScene" uid="uid://dka6rvp6wvihh" path="res://scenes/UIsystem.tscn" id="7_xajxm"]
+[ext_resource type="PackedScene" uid="uid://cy2y5ffoa5j54" path="res://scenes/UIbutton.tscn" id="7_u2ih3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pipt2"]
 texture = ExtResource("1_lyoc1")
@@ -162,4 +162,33 @@ position = Vector2(152, 88)
 [node name="tilehandler" type="Node2D" parent="."]
 script = ExtResource("6_kgvpc")
 
-[node name="CanvasLayer" parent="." instance=ExtResource("7_xajxm")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 2
+offset_left = 1000.0
+offset_top = 370.0
+offset_right = 1100.27
+offset_bottom = 710.0
+alignment = 1
+
+[node name="UIButton" parent="CanvasLayer/Control/VBoxContainer" node_paths=PackedStringArray("nodePrompted") instance=ExtResource("7_u2ih3")]
+layout_mode = 2
+size_flags_stretch_ratio = 4.71
+focusing = true
+nodePrompted = NodePath("../../../..")
+output = 0
+
+[node name="UIButton2" parent="CanvasLayer/Control/VBoxContainer" node_paths=PackedStringArray("nodePrompted") instance=ExtResource("7_u2ih3")]
+layout_mode = 2
+nodePrompted = NodePath("../../../..")
+output = 1
